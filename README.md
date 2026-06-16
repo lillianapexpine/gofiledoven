@@ -1,4 +1,4 @@
-# hook-manager-81a490
+# hook-manager-d21290
 
 A Go hook-manager utility.
 
